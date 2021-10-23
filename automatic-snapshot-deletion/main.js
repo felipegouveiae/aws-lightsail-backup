@@ -64,9 +64,9 @@ const deleteOldSnapshots = async () => {
             await deleteInstanceSnapshot(snapshot.name);
         }
 
-        // if (pageToken) {
-        //     await deleteOldSnapshots();
-        // }
+        if (pageToken) {
+            await deleteOldSnapshots();
+        }
 
     });
 };
