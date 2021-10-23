@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node run.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1013.0",
+    "momentjs": "^2.0.0",
+    "uuid": "^8.3.2"
+  }
+}

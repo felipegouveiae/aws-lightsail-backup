@@ -1,0 +1,84 @@
+{
+  "instanceSnapshots": [
+    {
+      "name": "Staging.docker.vimsoftsolutions.com-CentOS-1599568962",
+      "arn": "arn:aws:lightsail:us-east-1:336555378973:InstanceSnapshot/08264c74-1e84-48c0-8175-b5626a2b0e65",
+      "supportCode": "708799225075/ami-07eb7cf56bc62878d",
+      "createdAt": "2020-09-08T12:42:46.787Z",
+      "location": {
+        "availabilityZone": "all",
+        "regionName": "us-east-1"
+      },
+      "resourceType": "InstanceSnapshot",
+      "tags": [],
+      "state": "available",
+      "fromAttachedDisks": [],
+      "fromInstanceName": "Staging.docker.vimsoftsolutions.com-CentOS",
+      "fromInstanceArn": "arn:aws:lightsail:us-east-1:336555378973:Instance/4f2fc0f5-a4e5-405b-8086-9135f9a74b66",
+      "fromBlueprintId": "centos_7_1901_01",
+      "fromBundleId": "medium_2_0",
+      "isFromAutoSnapshot": false,
+      "sizeInGb": 80
+    },
+    {
+      "name": "Vimsoftsolutions.com-CentOS-1GB-Virginia-1-1599569055",
+      "arn": "arn:aws:lightsail:us-east-1:336555378973:InstanceSnapshot/0c95ed8a-95f8-4c45-be35-7efc5ccfa00d",
+      "supportCode": "708799225075/ami-048bcaf8fe83fa156",
+      "createdAt": "2020-09-08T12:44:22.380Z",
+      "location": {
+        "availabilityZone": "all",
+        "regionName": "us-east-1"
+      },
+      "resourceType": "InstanceSnapshot",
+      "tags": [],
+      "state": "available",
+      "fromAttachedDisks": [],
+      "fromInstanceName": "Vimsoftsolutions.com-CentOS-1GB-Virginia-1",
+      "fromInstanceArn": "arn:aws:lightsail:us-east-1:336555378973:Instance/1f5c706d-6075-40ff-8294-152de362be4e",
+      "fromBlueprintId": "centos_7_1901_01",
+      "fromBundleId": "micro_2_0",
+      "isFromAutoSnapshot": false,
+      "sizeInGb": 40
+    },
+    {
+      "name": "StagingCentOS8GB-1634583575",
+      "arn": "arn:aws:lightsail:us-east-1:336555378973:InstanceSnapshot/0da3955e-33b2-4f51-b2d1-197984ea993f",
+      "supportCode": "708799225075/ami-0f495ae75ada78984",
+      "createdAt": "2021-10-18T18:59:41.520Z",
+      "location": {
+        "availabilityZone": "all",
+        "regionName": "us-east-1"
+      },
+      "resourceType": "InstanceSnapshot",
+      "tags": [],
+      "state": "available",
+      "fromAttachedDisks": [],
+      "fromInstanceName": "StagingCentOS8GB",
+      "fromInstanceArn": "arn:aws:lightsail:us-east-1:336555378973:Instance/c259b8f3-9149-4359-8520-8fecc34f8e2c",
+      "fromBlueprintId": "centos_7_1901_01",
+      "fromBundleId": "large_2_0",
+      "isFromAutoSnapshot": false,
+      "sizeInGb": 160
+    },
+    {
+      "name": "Vimsoftsolutions.com-CentOS-1GB-Virginia-1-1558982396",
+      "arn": "arn:aws:lightsail:us-east-1:336555378973:InstanceSnapshot/8cfebb10-d995-4d58-9e11-6f84e67122de",
+      "supportCode": "708799225075/ami-0bea375a7fb09da4c",
+      "createdAt": "2019-05-27T18:40:00.372Z",
+      "location": {
+        "availabilityZone": "all",
+        "regionName": "us-east-1"
+      },
+      "resourceType": "InstanceSnapshot",
+      "tags": [],
+      "state": "available",
+      "fromAttachedDisks": [],
+      "fromInstanceName": "Vimsoftsolutions.com-CentOS-1GB-Virginia-1",
+      "fromInstanceArn": "arn:aws:lightsail:us-east-1:336555378973:Instance/1f5c706d-6075-40ff-8294-152de362be4e",
+      "fromBlueprintId": "centos_7_1901_01",
+      "fromBundleId": "micro_2_0",
+      "isFromAutoSnapshot": false,
+      "sizeInGb": 40
+    }
+  ]
+}
