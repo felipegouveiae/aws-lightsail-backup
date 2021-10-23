@@ -1,32 +1,13 @@
-# This repo contains the scripts to :  # 
+# Which problem this project solves?
 
-1. Build a ECR Docker Image to backup lightsail instances
-2. Create a container do stop your lightsail instance, generate e snapshot and get your instance running again.
+AWS Lightsail is amazing but it does not take instance snapshots for Windows instances. I have created this project to solve this problem.
 
-All the settings are set to the container using hte following environment variables:
+# This repo contains two projects: 
 
-AWS_KEY, AWS_SECRET: Key and secret with the permission to start instance, stop instance,read instances, create snapshots, read snapshots
+1. backup: it contains a docker image source code that is meant to backup windows instances on AWS Lightsail. The docker image contains a script that will 1. stop the instance; 2. take a snapshot; 3. get the instance running again.
 
-AWS_REGION: Instance Region
-INSTANCE_NAME: Instance Name
+2. automatic-snapshot-deletion: this folder contains a nodejs docker image source code that will delete all the instance snapshots on AWS Lightsail after 90 days. Since the backup will only store the snapshots, this one will delete them after 90 days to avoid unnecessary charges.
 
-# build image 
+# How can you get that live on AWS?
 
-$ build-docker.sh YOUR_IMAGE_NAME YOUR_ECR_IMAGE_URI YOUR_ECR_IMAGE_REGION
-
-# backup.sh
-
-Checks if all the necessary variables are set;
-Sends a "stop instance" command;
-Wait until the instance is stopped. This is important for windows because AWS does not create snapshot of running instances for Windows;
-Sends a command to create a instance snapshot;
-Waits until the snapshot finishes (status "available");
-Sends a command to start the instance;
-
-# Deployment on AWS
-
-The easiest and less expensive way to run this backup container is to get it into a scheduled task into a Fargate Cluster.
-
-1. Create task definition to run this image;
-2. Create a AWS Fargate Cluster;
-3. Created a Scheduled Task. Important: Assign a IP to the container otherwise it will not be able to download the image from ECR;
+I built those images into and stored them into my ECR (Elastic Container Registry) and created an Amazon ECS Task for each one of them. Then I created a cluster and added those tasks as "Scheduled Tasks" to run about 3am every day. Those tasks will day once the processing is completed.
